@@ -1,0 +1,326 @@
+/* ------------------------------------------------------ */
+/* reset */
+/* ------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Poppins:wght@200;400;600&display=swap');
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,a,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+  outline: 0;
+}
+ul, ol {
+  list-style:none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+input, select {
+  vertical-align: middle;
+}
+html {
+  font-size: 15px;
+}
+body {
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(216, 12%, 54%);
+  font-weight: 400;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.5;
+}
+
+.spOnly {display: none;}
+.pcOnly {display: block;}
+
+main {
+  display: flex;
+  padding: 13.6% 0 0 15px;
+  text-align: left;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainWrap, .modalWrap, .modal {
+  max-width: 410px;
+  width: 100%;
+  border: 1px solid #212832;
+  border-radius: 35px;
+  background: #212832;
+}
+
+.mainInner {
+  margin: 30px 33px;
+}
+
+.mainImg, .modalImg, .rateItem, .switch-input, .modalClose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainImg, .rateItem, .switch-input {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #272e38;
+  border-radius: 50%;
+  background-color: #272e38;
+}
+
+.txtBlock {
+  margin-top: 35px;
+}
+
+.mainTxt01, .modalTxt02 {
+  color: hsl(0, 0%, 100%);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.mainTxt01 {
+  line-height: 1;
+}
+
+.mainTxt02 {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.rateList {
+  display: flex;
+  margin-top: 30px;
+  gap: 22px;
+}
+
+.rateItem {
+  transition: color 0.2s ease;
+}
+
+.rateItem.active {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.rateItem:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn {
+  display: block;
+  max-width: 345px;;
+  width: 100%;
+  margin: 30px auto 0;
+  padding: 10px;
+  border: 1px solid hsl(25, 97%, 53%);
+  border-radius: 50px;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  border: 1px solid hsl(0, 0%, 100%);;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  text-decoration: none;
+}
+
+.modalWrap {
+  display: none;
+  position: relative;
+  text-align: center;
+}
+
+.modalInner {
+  margin: 30px auto;
+}
+
+.modalTxt01 {
+  width: 195px;
+  margin: 37px auto 0;
+  padding: 10px;
+  border: 1px solid #272e38;
+  border-radius: 50px;
+  background-color: #272e38;
+  color: hsl(25, 97%, 53%);
+  letter-spacing: .8px;
+}
+
+.modalTxt02{
+  margin-top: 35px;
+}
+
+.modalTxt03 {
+  margin-top: 10px;
+}
+
+.modal a.close-modal {
+  background: none;
+}
+
+.modalClose {
+  position: absolute;
+  top: 14.5px;
+  right: 13.5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #272e38;
+  border-radius: 50%;
+  background-color: #272e38;
+  color: #fff;
+}
+
+.modalClose:hover {
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:767px) {
+  .spOnly {display: block;}
+	.pcOnly {display: none;}
+
+  body {
+    height: 100%;
+  }
+
+  .pageContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0 10px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .mainWrap {
+    width: 100%;
+    margin-top: 20%;
+  }
+
+  .mainWrap, .modalWrap, .modal {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .modalWrap, .modal {
+    width: 97%;
+  }
+
+  .mainInner {
+    margin: 23px 20px 30px 20px;
+  }
+
+  .mainImg, .rateItem, .switch-input {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mainImg, .txtBlock {
+    margin-left: 4px;
+  }
+
+  .mainImg img {
+    width: 39%;
+  }
+
+  .txtBlock {
+    margin-top: 23px;
+  }
+
+  .mainTxt01, .modalTxt02 {
+    font-size: 22px;
+    letter-spacing: .9px;
+  }
+
+  .mainTxt02 {
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: .4px;
+  }
+
+  .rateList {
+    margin-top: 28px;
+    gap: 18px;
+  }
+
+  .rateItem {
+    width: 43px;
+    height: 43px;
+  }
+
+  .btn {
+    max-width: 280px;
+    margin: 20px auto 0;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.7px;
+  }
+
+ /* .blocker {
+  top: 4px;
+ } */
+
+  .modalInner {
+    margin: 0 auto;
+  }
+
+  .modalImg img {
+    width: 92%;
+  }
+
+  .modalImg {
+    width: 170px;
+    margin: 25px auto 0;
+    padding: 7px;
+    font-size: 12px;
+  }
+
+  .modalTxt01 {
+    width: 170px;
+    margin: 19px auto 0;
+    padding: 6px;
+    font-size: 13px;
+    letter-spacing: .5px;
+  }
+
+  .modalTxt02 {
+    margin-top: 23px;
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+
+  .modalTxt03 {
+    margin-bottom: 40px;
+    font-size: 13px;
+    line-height: 1.6;
+    letter-spacing: .4px;
+  }
+
+  .modal {
+    padding: 0 20px;
+  }
+
+}

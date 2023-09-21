@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <div class="pageContent">
+    <main>
+      <!-- Rating state start -->
+      <div class="mainWrap">
+        <div class="mainInner">
+          <figure class="mainImg">
+            <img src="images/icon-star.svg" alt="">
+          </figure>
+          <div class="txtBlock">
+            <header class="mainTxt01">How did we do?</header>
+            <p class="mainTxt02">Please let us know how we did with your<br class="spOnly"> support request. All feedback is appreciated<br class="spOnly"> to help us improve our offering!</p>
+          </div>
+          
+          <ol class="rateList">
+            <li class="rateItem"><p class="num">1</p></li>
+            <li class="rateItem"><p class="num">2</p></li>
+            <li class="rateItem"><p class="num">3</p></li>
+            <li class="rateItem"><p class="num">4</p></li>
+            <li class="rateItem"><p class="num">5</p></li>
+          </ol>
+          <p><a href="#ex1" rel="modal:open" class="btn">SUBMIT</a></p>
+        </div>
+      </div>
+      <!-- Rating state end -->
+    
+      <!-- Thank you state start -->
+      <div class="modalWrap" id="ex1">
+        <a href="#" rel="modal:close" class="modalClose">x</a>
+       <div class="modalInner">
+         <figure  class="modalImg">
+           <img src="images/illustration-thank-you.svg" alt="">
+         </figure>
+         <p class="modalTxt01">You selected <span class="rateSelected"></span> out of 5</p>
+         <p class="modalTxt02">Thank you!</p>
+         <p class="modalTxt03">We appreciate you taking the time to give a<br class="spOnly"> rating.<br class="pcOnly"> If you ever need more support, don’t<br class="spOnly"> hesitate to<br class="pcOnly"> get in touch!</p>
+       </div>
+      </div>
+      <!-- Thank you state end -->
+    </main>
+    
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Wina</a>.
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
